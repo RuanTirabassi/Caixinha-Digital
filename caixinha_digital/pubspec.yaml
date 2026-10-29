@@ -1,0 +1,41 @@
+name: caixinha_digital
+description: Caixinha Digital - organizador de remédios para idosos (Grupo 2 - Empreendedorismo UENP).
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  supabase_flutter: ^2.8.0
+  intl: any
+  image_picker: ^1.1.2
+  url_launcher: ^6.3.1
+  flutter_svg: ^2.0.10
+  web: any # baixar cópia dos dados no navegador
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  # usados só no teste de integração (test_integracao/)
+  shared_preferences: any
+  image_picker_platform_interface: any
+  url_launcher_platform_interface: any
+  plugin_platform_interface: any
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/figma/
+  # Fonte do protótipo no Figma (Inter, licença OFL em assets/fonts)
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700

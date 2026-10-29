@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Ok Icon">
+<circle id="Ellipse 1" cx="38" cy="38" r="38" fill="#37DB00"/>
+<g id="Vector">
+<use xlink:href="#stroke0_0_26" fill="white"/>
+<mask id="stroke1_0_26" maskUnits="userSpaceOnUse" x="16" y="22" width="44" height="32" fill="black">
+<rect fill="white" x="16" y="22" width="44" height="32"/>
+<use xlink:href="#stroke0_0_26"/>
+</mask>
+<path d="M31.0744 47.4876L21.2342 37.6954L18 40.9138L29.4688 52.3267C29.9275 52.7832 30.501 52.9886 31.0974 52.9886C31.6937 52.9886 32.2672 52.7603 32.7259 52.3267L57.9573 27.2184L54.7231 24L31.1203 47.4876H31.0744Z" stroke-width="2" stroke="white" mask="url(#stroke1_0_26)"/>
+</g>
+</g>
+<defs>
+<path id="stroke0_0_26" d="M31.0744 47.4876L21.2342 37.6954L18 40.9138L29.4688 52.3267C29.9275 52.7832 30.501 52.9886 31.0974 52.9886C31.6937 52.9886 32.2672 52.7603 32.7259 52.3267L57.9573 27.2184L54.7231 24L31.1203 47.4876H31.0744Z"/>
+</defs>
+</svg>
