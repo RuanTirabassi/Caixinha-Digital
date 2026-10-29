@@ -122,8 +122,19 @@ class _HomeIdosoTelaState extends State<HomeIdosoTela> {
         body: SafeArea(
           child: RefreshIndicator(
             onRefresh: _carregar,
-            child: ListView(padding: const EdgeInsets.fromLTRB(24, 40, 24, 24), children: [
+            child: ListView(padding: const EdgeInsets.fromLTRB(24, 12, 24, 24), children: [
               // ---------- Cabeçalho ----------
+              Align(
+                alignment: Alignment.centerRight,
+                child: Tooltip(
+                  message: 'Sair deste celular',
+                  child: TextButton.icon(
+                    onPressed: _sair,
+                    icon: const Icon(Icons.logout, size: 26, color: Cores.texto),
+                    label: Text('Sair', style: Estilos.idosoCorpo.copyWith(fontWeight: FontWeight.w700)),
+                  ),
+                ),
+              ),
               Text('${_saudacao()}, ${idoso.nomeTratamento}!', style: Estilos.idosoTitulo),
               const SizedBox(height: 4),
               Text('${capitalizarPalavras(data)}.', style: Estilos.idosoCorpo),
@@ -143,11 +154,6 @@ class _HomeIdosoTelaState extends State<HomeIdosoTela> {
               _cardConsulta(idoso),
               const SizedBox(height: 16),
               _faixaStatus(atual),
-              const SizedBox(height: 30),
-              Align(
-                alignment: Alignment.centerRight,
-                child: BotaoEngrenagem(dica: 'Sair deste celular', onTap: _sair),
-              ),
             ]),
           ),
         ),

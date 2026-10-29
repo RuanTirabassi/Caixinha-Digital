@@ -116,22 +116,30 @@ class _PainelTelaState extends State<PainelTela> {
         child: RefreshIndicator(
           onRefresh: _carregar,
           child: ListView(padding: const EdgeInsets.fromLTRB(20, 32, 20, 24), children: [
-            // ---------- Cabeçalho com troca de pessoa ----------
-            PopupMenuButton<String>(
-              onSelected: _trocarPessoa,
-              itemBuilder: (_) => [
-                for (final p in _pessoas)
-                  PopupMenuItem(value: p.id, child: Text('${p.nomeTratamento} ${p.sobrenome ?? ''}')),
-              ],
-              child: Row(children: [
-                Flexible(
-                  child: Text('Painel ${i.daDo} ${i.nomeTratamento}',
-                      style: Estilos.cuidadorTitulo.copyWith(fontSize: 22)),
+            // ---------- Cabeçalho com troca de pessoa e Configurações ----------
+            Row(children: [
+              Expanded(
+                child: PopupMenuButton<String>(
+                  onSelected: _trocarPessoa,
+                  itemBuilder: (_) => [
+                    for (final p in _pessoas)
+                      PopupMenuItem(value: p.id, child: Text('${p.nomeTratamento} ${p.sobrenome ?? ''}')),
+                  ],
+                  child: Row(children: [
+                    Flexible(
+                      child: Text('Painel ${i.daDo} ${i.nomeTratamento}',
+                          style: Estilos.cuidadorTitulo.copyWith(fontSize: 22)),
+                    ),
+                    const SizedBox(width: 6),
+                    const Icon(Icons.arrow_drop_down, size: 28, color: Cores.texto),
+                  ]),
                 ),
-                const SizedBox(width: 6),
-                const Icon(Icons.arrow_drop_down, size: 28, color: Cores.texto),
-              ]),
-            ),
+              ),
+              BotaoEngrenagem(
+                dica: 'Configurações',
+                onTap: () => _abrir(ConfiguracoesTela(idoso: i, pessoas: _pessoas)),
+              ),
+            ]),
             Text(
                 '${capitalizarPalavras(DateFormat("EEEE, d 'de' MMMM", 'pt_BR').format(agora))} • ${DateFormat.Hm().format(agora)}',
                 style: Estilos.cuidadorCorpo.copyWith(fontSize: 14)),
@@ -196,17 +204,6 @@ class _PainelTelaState extends State<PainelTela> {
                   _carregar();
                 }),
               ],
-            ),
-
-            Transform.translate(
-              offset: const Offset(0, -40),
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: BotaoEngrenagem(
-                  dica: 'Configurações',
-                  onTap: () => _abrir(ConfiguracoesTela(idoso: i, pessoas: _pessoas)),
-                ),
-              ),
             ),
           ]),
         ),

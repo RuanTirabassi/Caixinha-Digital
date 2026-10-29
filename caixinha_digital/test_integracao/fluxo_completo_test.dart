@@ -462,9 +462,9 @@ void main() {
     await tocar(find.byTooltip('Sair deste celular'));
     await tocar(texto('Ficar'));
     await tocar(find.byTooltip('Sair deste celular'));
-    await tocar(texto('Sair'));
+    await tocar(find.descendant(of: find.byType(AlertDialog), matching: texto('Sair')));
     await esperar(texto('TENHO UM CÓDIGO'));
-    passo('Engrenagem do idoso: "Ficar" e "Sair" funcionam');
+    passo('Botão Sair do idoso: "Ficar" e "Sair" funcionam');
 
     // =============== 9. CUIDADOR DE NOVO + TEMPO REAL ===============
     await tocar(texto('Sou cuidador / familiar'));
