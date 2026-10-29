@@ -8,9 +8,8 @@ class Config {
   static const supabaseAnonKey =
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZteGx5ZW9zZ21ydGpwdnZnbmplIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMxMjY3MDAsImV4cCI6MjEwODcwMjcwMH0.oLR1n-Ild9SiXnPxkV70vwbLW5ctFu5DfkOnZlHbmio';
 
-  /// Endereço usado no link enviado pelo WhatsApp.
-  /// Troque pelo endereço onde o app web for publicado (ex.: Vercel).
-  static const urlApp = 'https://caixinha.app';
+  /// Endereço usado no link enviado pelo WhatsApp (app web publicado na Vercel).
+  static const urlApp = 'https://caixinha-digital.vercel.app';
 
   /// No navegador usa o próprio endereço aberto (localhost, Vercel...),
   /// assim o link do WhatsApp funciona sem precisar editar este arquivo.
