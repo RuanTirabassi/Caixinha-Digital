@@ -81,7 +81,7 @@ class Botao extends StatelessWidget {
     final style = (estilo ?? Estilos.cuidadorSecao).copyWith(color: frente);
     return Material(
       color: onPressed == null && !carregando ? fundo.withValues(alpha: 0.5) : fundo,
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: borda == null ? BorderRadius.circular(16) : null,
       shape: borda == null
           ? null
           : RoundedRectangleBorder(
