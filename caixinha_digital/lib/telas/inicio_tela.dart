@@ -66,7 +66,7 @@ class _InicioTelaState extends State<InicioTela> {
       body: SafeArea(
         child: Center(
           child: ListView(shrinkWrap: true, padding: const EdgeInsets.all(24), children: [
-            const Icon(Icons.inventory_2, size: 72, color: Cores.acao),
+            Image.asset('assets/logo.png', height: 120),
             const SizedBox(height: 12),
             Text('Caixinha Digital',
                 textAlign: TextAlign.center, style: Estilos.idosoTitulo.copyWith(fontSize: 30)),

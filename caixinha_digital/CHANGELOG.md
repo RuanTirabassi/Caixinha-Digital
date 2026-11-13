@@ -10,6 +10,15 @@ Toda mudança no app sobe a versão em `pubspec.yaml` e ganha uma entrada aqui
 
 ---
 
+## 1.2.0+3 — 13/11/2026
+
+**Marca**
+- Tela inicial: o ícone genérico foi substituído pela logo oficial da Caixinha
+  Digital (`assets/logo.png`), acima do título. Dá identidade visual à primeira
+  tela que a pessoa vê ao abrir o app.
+
+---
+
 ## 1.1.0+2 — 29/10/2026
 
 **Telas**
